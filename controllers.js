@@ -1,7 +1,8 @@
 weatherApp
-    .controller('HomeController', ['DataService', function HomeController(store) {
+    .controller('HomeController', ['$location', 'DataService', function HomeController($location, store) {
         this.showForecasts = function showForecasts() {
             store.cityName = this.cityName;
+            $location.url('/forecasts');
         }
     }])
     .controller('ForecastsController', ['WeatherService', 'GeocodeService', 'DataService', function ForecastsController(w, gc, store) {
