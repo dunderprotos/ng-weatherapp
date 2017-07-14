@@ -1,7 +1,7 @@
 weatherApp.service('WeatherService', ['$http', function WeatherService($http) {
     // Custom PHP server because CORS.
     var scope = this;
-    var url = "http://home.dev:808/api";
+    var url = "/api";
 
     this.celsius = function celsius(f) {
         return Math.round((f - 32) * 5 / 9);
