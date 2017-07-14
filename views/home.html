@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-3 col-sm-6">
+
+            <form ng-submit="home.showForecasts()" action="#!/forecasts" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        <label for="cityInput" class="control-label">City:</label>
+                    </div>
+                    <div class="col-sm-7">
+                        <input id="cityInput" type="text" class="form-control" placeholder="Los Angeles" ng-model="home.cityName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-7">
+                        <button type="submit" class="btn btn-primary">Show Forecasts</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

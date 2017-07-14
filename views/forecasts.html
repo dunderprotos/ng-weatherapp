@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row" ng-if="!!fc.displayedCityName">
+        <h1>
+            Forecasts for {{ fc.displayedCityName }}<br>
+            <small>{{ fc.summary }}</small>
+        </h1>
+        <p class="lead text-muted text-center loading-text" ng-hide="fc.isLoaded">
+            Loading...
+        </p>
+        <weather-list class="forecastlist">
+            <weather-block ng-repeat="forecast in fc.weekData" forecast="forecast" unit="{{ fc.unit }}"></weather-block>
+        </weather-list>
+    </div>
+    <div class="row" ng-if="!fc.displayedCityName">
+        <p class="lead text-muted text-center">
+            <a href="#/">Enter</a> a city name to see the forecasts.
+        </p>
+    </div>
+</div>

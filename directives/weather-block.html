@@ -1,0 +1,10 @@
+<div class="list-group-item">
+    <h4 class="list-group-item-heading">
+        {{ forecast.date | date:'EEEE, d MMMM' }}<br>
+        <small>
+            <span class="forecast__tempval forecast__tempval--cold"><i class="fa fa-thermometer-empty" aria-hidden="true" aria-label="Min"></i> {{ forecast.minTemp }}&#176;{{ unit }}</span>
+            <span class="forecast__tempval forecast__tempval--hot"><i class="fa fa-thermometer-full" aria-hidden="true" aria-label="Max"></i> {{ forecast.maxTemp }}&#176;{{ unit }}</span>
+        </small>
+    </h4>
+    <p class="list-group-item-text">{{ forecast.summary }}</p>
+</div>
